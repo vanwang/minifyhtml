@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.puma.minifyhtml</groupId>
+  <artifactId>minifyhtml-maven-plugin</artifactId>
+  <packaging>maven-plugin</packaging>
+  <version>1.0.0</version>
+  <name>minifyhtml-maven-plugin Maven Mojo</name>
+  <url>http://maven.apache.org</url>
+  
+  <!-- <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-plugin-plugin</artifactId>
+        <version>3.0</version>
+        <executions>
+        </executions>
+        <configuration>
+          <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build> -->
+  
+  <prerequisites>
+    <maven>${maven.version}</maven>
+  </prerequisites>
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+      <version>${maven.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-core</artifactId>
+      <version>${maven.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+	  <groupId>com.googlecode.htmlcompressor</groupId>
+	  <artifactId>htmlcompressor</artifactId>
+	  <version>1.4</version>
+	</dependency>
+	<dependency>
+	  <groupId>com.google.javascript</groupId>
+	  <artifactId>closure-compiler</artifactId>
+	  <version>r1043</version>
+	</dependency>
+	<dependency>
+	  <groupId>com.yahoo.platform.yui</groupId>
+	  <artifactId>yuicompressor</artifactId>
+	  <version>2.4.7</version>
+	</dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+   <properties>
+    <maven.version>3.0.2</maven.version>
+    <encoding>UTF-8</encoding>
+    <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+  </properties>
+</project>

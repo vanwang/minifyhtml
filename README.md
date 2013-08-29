@@ -6,6 +6,7 @@ minifyhtml
 
 典型配置：
 
+``` xml
 <plugin>
 	<groupId>net.alchim31.maven</groupId>
 	<artifactId>yuicompressor-maven-plugin</artifactId>
@@ -53,3 +54,4 @@ minifyhtml
 		<warSourceDirectory>${basedir}/WebRoot</warSourceDirectory>
 	</configuration>
 </plugin>
+``` 
